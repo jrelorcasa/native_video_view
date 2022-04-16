@@ -107,7 +107,7 @@ class NativeVideoViewController(
                 val position: Int? = call.argument("position")
                 if (position != null){
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        mediaPlayer?.seekTo(position!!.toLong() , MediaPlayer.SEEK_CLOSEST)
+                        mediaPlayer?.seekTo(position!!.toLong() , MediaPlayer.SEEK_CLOSEST_SYNC)
                     } else {
                         videoView?.seekTo(position)
                     }
